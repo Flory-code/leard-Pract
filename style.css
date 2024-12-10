@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}
+
+header a{
+    margin: 0 20px 0 0;
+    font-size: 25px;
+}
+
+.header-all{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.head-links{
+    justify-content: center;
+}
+.authlogo{
+    margin-top: 7px;
+    margin-right: 20px;
+}
+.logo{
+    margin-left: 20px;
+}
+
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background: linear-gradient(140deg, #ff00ea, #00e6ff);
+    background-size: 300% 300%;
+    animation: grad 32s ease infinite;
+}
+
+
+
+@keyframes grad {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+
+.authorization{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-next{
+    height: 30px;
+    width: 100px;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    animation-duration: 2s;
+}
+
+.button-next:active{
+    background-color: red;
+}
+
+input[type='text']{
+    margin-top: 3px;
+    height: 30px;
+    border: 2px solid red;  
+    padding-left: 10px; 
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type='text']:focus {
+    border: 1px solid rgb(12, 206, 255);   
+}
+
+input[type='date']{
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid red;
+    outline: none;
+}
+
+
+
+
+
+
+.content{
+    height: 500px;
+    background-color: brown;
+    color: white;
+}
+
+
+.disabled {
+    pointer-events: none; /* Отключает клики */
+    color: gray; /* Изменяет цвет текста на серый */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-center{
+    position: relative;
+    top: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer{
+    height: 300px;
+    background-color: black;
+
+}
+
+.icons{
+
+    display: flex;
+    align-items: center;
+}
+
+.tg-icon{
+    height: 100px;
+}
+.vk-icon{
+    height: 130px;
+}
+
+.copyright{
+    position: relative;
+    color: white;
+
+}
