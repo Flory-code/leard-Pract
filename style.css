@@ -23,10 +23,12 @@ header a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 
 }
 .head-links{
     justify-content: center;
+
 }
 .authlogo{
     margin-top: 7px;
