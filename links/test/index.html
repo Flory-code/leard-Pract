@@ -4,117 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Apex Legends Test</title>
 </head>
 <body>
     <header>
         <div class="header-all">
             <a href="index.html" class="logo">Apex Legends</a>
-
             <div class="head-links">
-                <a href="/links/description/">Описание</a>
-                <a href="test.html">Тест</a>
+                <a href="../description/description.html">Описание</a>
+                <a href="">Тест</a>
                 <a href="dictionary.html">Словарь</a>
                 <a href="galery.html">Галерея</a>
-                <a href="account.html">Личный кабинет</a>
+
             </div>
-
-
             <div class="authlogo">
-                <img src="/img/image.png" alt="logo" class="authlogo-img">
+                <a href="../../index.html">Выйти</a>
             </div>
         </div>
     </header>
 
 
-    <div id="slide2" class="slide" >
-        <div class="names">
-            <h1>Linux core</h1>
-        </div>
-        <form id="testForm">
-            <h2>Вопрос 1:</h2>
-            <p>Корневой каталог</p>
-            <input type="text" id="q1" placeholder="Ответ..." required>
-            <h2>Вопрос 2:</h2>
-            <p>Команда для полного удаления всех каталогов системы</p>
-            <input type="text" id="q2" placeholder="Ответ..." required>
+    <div class="content">
+        <div id="quiz" class="slide">
+            <h1 class="titt">Apex Legends Quiz</h1>
+            <form id="quizForm" novalidate>
+                <h2>Вопрос 1:</h2>
+                <p>Какой персонаж использует способности, связанные с телепортацией?</p>
+                <input type="text" id="q1" placeholder="Ответ..." required>
 
-            <h2>Вопрос 3:</h2>
-            <p>Какой командой можно посмотреть список файлов в директории?</p>
-            <div class="form_radio_btn">
-                <input id="radio-4" type="radio" name="q3" value="dir">
-                <label for="radio-4">dir</label>
-                <input id="radio-3" type="radio" name="q3" value="ls">
-                <label for="radio-3">ls</label>
-                <input id="radio-5" type="radio" name="q3" value="list">                    <label for="radio-5">list</label>
-            </div>
-            <h2>Вопрос 4:</h2>
-            <p>Какой файл отвечает за конфигурацию сети?</p>
-            <div class="form_radio_btn">
+                <h2>Вопрос 2:</h2>
+                <p>Какой предмет позволяет вам восстанавливать здоровье?</p>
+                <input type="text" id="q2" placeholder="Ответ..." required>
 
-                <input id="radio-7" type="radio" name="q4" value="/etc/resolv.conf">                    <label for="radio-7">/etc/resolv.conf</label>
-                <input id="radio-8" type="radio" name="q4" value="/etc/hosts">
-                <label for="radio-8">/etc/hosts</label>
-                <input id="radio-6" type="radio" name="q4" value="/etc/network/interfaces">
-                <label for="radio-6">/etc/network/interfaces</label>
-
-            </div>
-
-
-                <h2>Вопрос 5:</h2>
-                <p>Какой командой можно установить пакет?</p>
+                <h2>Вопрос 3:</h2>
+                <p>Какой класс персонажей имеет способности поддержки?</p>
                 <div class="form_radio_btn">
-                    <input id="radio-9" type="radio" name="q5" value="apt-get install">
-                    <label for="radio-9">apt-get install</label>
-                    <input id="radio-10" type="radio" name="q5" value="install">
-                    <label for="radio-10">install</label>
-                    <input id="radio-11" type="radio" name="q5" value="get install">
-                    <label for="radio-11">get install</label>
+                    <input id="radio-1" type="radio" name="q3" value="support">
+                    <label for="radio-1">Support</label>
+                    <input id="radio-2" type="radio" name="q3" value="offense">
+                    <label for="radio-2">Offense</label>
+                    <input id="radio-3" type="radio" name="q3" value="defense">
+                    <label for="radio-3">Defense</label>
                 </div>
 
-                <h2>Вопрос 6:</h2>
-                <p>Какой командой можно перезагрузить систему?</p>
+                <h2>Вопрос 4:</h2>
+                <p>Какой предмет позволяет вам видеть врагов через стены?</p>
                 <div class="form_radio_btn">
+                    <input id="radio-4" type="radio" name="q4" value="ping">
+                    <label for="radio-4">Ping</label>
+                    <input id="radio-5" type="radio" name="q4" value="scan">
+                    <label for="radio-5">Scan</label>
+                    <input id="radio-6" type="radio" name="q4" value="reveal">
+                    <label for="radio-6">Reveal</label>
+                </div>
 
-                    <input id="radio-13" type="radio" name="q6" value="shutdown">
-                    <label for="radio-13">shutdown</label>
-                    <input id="radio-14" type="radio" name="q6" value="restarts">
-                    <label for="radio-14">restart</label>
-                    <input id="radio-12" type="radio" name="q6" value="reboot">
-                    <label for="radio-12">reboot</label>
+                <h2>Вопрос 5:</h2>
+                <p>Какой персонаж является мастером стрельбы из снайперской винтовки?</p>
+                <input type="text" id="q5" placeholder="Ответ..." required>
 
+                <div class="con2">
+                    <button type="submit">Проверить</button>
+                    <button type="button" id="retry">Повторить</button>
+                </div>
+            </form>
         </div>
-            <br><br><br>
-            <div class="con2">
-                <button type="submit">Проверить</button>
-                <button type="button" id="backToSlide1">Вернуться</button>
-            </div>
-        </form>
+
+        <div id="resultContent" class="result">
+            <h2>Результаты:</h2>
+            <p>Вы ответили на 0 из 5 вопросов верно.</p>
+        </div>
     </div>
-
-    <div id="slide3" class="slide" style="display:none;">
-        <h1>Результаты</h1>
-        <div id="results"></div><br>
-        <button id="retry">Повторить</button>
-    </div>
-
-
-
-
-
-
     <footer>
         <div class="footer-center">
             <a href="tel:+79998887766" class="phone"><h1>+7(999)888 77-66</h1></a>
             <div class="icons">
                 <a href=""><img src="/img/telegram.svg" alt="" class="tg-icon"></a>
-                <a href=""><img src="./img/vk.svg" alt="" class="vk-icon"></a>
+                <a href=""><img src="/img/vk.svg" alt="" class="vk-icon"></a>
             </div>
             <h1 class="copyright">© r5Academy 2024</h1>
         </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-</html>

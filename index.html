@@ -5,65 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Документ</title>
+    <style>
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-all">
-            <a href="index.html" class="logo">Apex Legends</a>
-
-            <div class="head-links" id="header-links">
-                <a href="links/description/description.html" class="disabled">Описание</a>
-                <a href="links/test/index.html" class="disabled">Тест</a>
-                <a href="links/dictionary/index.html" class="disabled">Словарь</a>
-                <a href="links/galery/index.html" class="disabled">Галерея</a>
-                <a href="links/account/index.html" class="disabled">Личный кабинет</a>
-            </div>
-
-            <div class="authlogo">
-                <img src="img/image.png" alt="logo" class="authlogo-img">
-            </div>
-        </div>
-    </header>
-
     <div class="content">
         <div id="slide1" class="authorization">
             <div class="container">
-                <h1>Авторизация</h1>
                 <form id="authForm" novalidate>
-                    <br>
+                    <h1 class="autho">Авторизация</h1>
+                    <br><br><br>
+                    
                     <label for="login">Логин:</label>
-                    <input type="text" id="login" placeholder="Руслан" required><br>
-                    <span class="errors" id="login-error" style="color: rgb(255, 255, 255);"></span> <!-- Элемент для ошибки логина -->
-                    <br>
-            
-                    <label for="password">Пароль:</label>
-                    <input type="password" id="password" placeholder="123" required><br>
-                    <span class="errors" id="password-errors" style="color: rgb(255, 255, 255);"></span> <!-- Элемент для ошибки пароля -->
+                    <input type="text" id="login" placeholder="Руслан" required 
+                           pattern="^[а-яА-ЯёЁ0-9]{4,10}$" 
+                           title="Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10."><br>
+                    <span class="errors" id="login-error"></span> <!-- Блок для ошибки логина -->
                     <br>
             
                     <label for="dob">Дата рождения:</label>
-                    <input type="date" id="dob" required><br>
-                    <span class="errors" id="dob-error" style="color: rgb(255, 255, 255);"></span> <!-- Элемент для ошибки даты рождения -->
+                    <input type="date" id="dob" required 
+                           min="1950-01-01" 
+                           max="datetime-local" 
+                           title="Дата рождения должна быть не раньше 1950 года и не позже текущей даты."><br>
+                    <span class="errors" id="dob-error"></span> <!-- Блок для ошибки даты рождения -->
                     <br>
-            
+                    
+                    <label>Пол:</label>
+                    <div class="gender-options">
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Мужской</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Женский</label>
+                        </div>
+                    </div>
+                    <span class="errors" id="gender-error"></span> <!-- Блок для ошибки пола -->
+                    <br><br>
+                    
                     <button type="submit" class="button-next">Подтвердить</button>
                 </form>
             </div>
         </div>
-        
-        
     </div>
-
-    <footer>
-        <div class="footer-center">
-            <a href="tel:+79998887766" class="phone"><h1>+7(999)888 77-66</h1></a>
-            <div class="icons">
-                <a href=""><img src="img/telegram.svg" alt="" class="tg-icon"></a>
-                <a href=""><img src="img/vk.png" alt="" class="vk-icon"></a>
-            </div>
-            <h1 class="copyright">© r5Academy 2024</h1>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

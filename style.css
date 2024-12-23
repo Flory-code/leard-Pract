@@ -2,60 +2,16 @@
     padding: 0;
     margin: 0;
 }
-a{
-    text-decoration: none;
+
+.content{
+    height: 1080px;
+    background-color: rgb(0, 0, 0);
     color: white;
-}
-
-
-header {
-    height: 100px;
-    width: 100%;
-    background-color: black;
-}
-
-header a{
-    margin: 0 20px 0 0;
-    font-size: 25px;
-}
-
-.header-all{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-.head-links{
-    justify-content: center;
-
-}
-.authlogo{
-    margin-top: 7px;
-    margin-right: 20px;
-}
-.logo{
-    margin-left: 20px;
-}
-
-
-
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 500px;
-    width: 500px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 10px;
     background: linear-gradient(140deg, #ff00ea, #00e6ff);
     background-size: 300% 300%;
+    font-size: 1.5rem;
     animation: grad 32s ease infinite;
 }
-
-
 
 @keyframes grad {
     0%{background-position:2% 0%}
@@ -68,6 +24,58 @@ header a{
     align-items: center;
     flex-direction: column;
 }
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    height: 600px;
+    width: 500px; /* Фиксированная ширина */
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-align: center; /* Центрируем текст внутри контейнера */
+}
+
+
+
+.autho{
+    margin-bottom: 10px;
+
+}
+
+.submitt{
+    top: 70px;
+}
+
+
+.gender-options {
+    display: flex;
+    justify-content: center; /* Центрируем элементы внутри */
+    gap: 20px; /* Расстояние между радио-кнопками */
+    width: 100%; /* Устанавливаем ширину 100% */
+    padding: 0 10px; /* Добавляем отступы слева и справа */
+    box-sizing: border-box; /* Учитываем отступы в ширине */
+}
+
+.errors {
+    color: rgb(255, 0, 0);
+    font-size: 0.9rem; /* Уменьшаем размер текста ошибок */
+    margin-top: 5px; /* Добавляем отступ сверху */
+    display: block; /* Убедимся, что ошибки отображаются как блочные элементы */
+    min-height: 20px; /* Устанавливаем минимальную высоту для блока ошибок */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 0 10px; /* Добавляем отступы слева и справа */
+    width: 100%; /* Устанавливаем ширину 100% */
+    box-sizing: border-box; /* Учитываем отступы в ширине */
+}
+
+
+
 
 .button-next{
     height: 30px;
@@ -86,83 +94,18 @@ header a{
 input[type='text']{
     margin-top: 3px;
     height: 30px;
-    border: 2px solid red;  
+    border: 2px solid rgb(0, 0, 0);  
     padding-left: 10px; 
     border-radius: 4px;
     outline: none;
 }
 
-input[type='text']:focus {
-    border: 1px solid rgb(12, 206, 255);   
-}
+
 
 input[type='date']{
     height: 30px;
     border-radius: 4px;
-    border: 2px solid red;
+    border: 2px solid rgb(0, 0, 0);
     outline: none;
 }
 
-
-
-
-
-
-.content{
-    height: 500px;
-    background-color: brown;
-    color: white;
-}
-
-
-.disabled {
-    pointer-events: none; /* Отключает клики */
-    color: gray; /* Изменяет цвет текста на серый */
-    text-decoration: none; /* Убирает подчеркивание */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer-center{
-    position: relative;
-    top: 13%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-footer{
-    height: 300px;
-    background-color: black;
-
-}
-
-.icons{
-
-    display: flex;
-    align-items: center;
-}
-
-.tg-icon{
-    height: 100px;
-}
-.vk-icon{
-    height: 130px;
-}
-
-.copyright{
-    position: relative;
-    color: white;
-
-}

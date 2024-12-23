@@ -23,7 +23,7 @@ header a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    height: 100%;
 }
 .head-links{
     justify-content: center;
@@ -37,7 +37,9 @@ header a{
 }
 
 
-
+.pp{
+    margin-bottom: 80px;
+}
 
 
 .image-left{
@@ -60,6 +62,19 @@ header a{
     position: absolute;
     width: 468px;
     top: 800px;
+    right: 0;
+}
+
+.image3-left{
+    position: absolute;
+    width: 468px;
+    top: 1000px;
+}
+
+.image3-right{
+    position: absolute;
+    width: 468px;
+    top: 1000px;
     right: 0;
 }
 

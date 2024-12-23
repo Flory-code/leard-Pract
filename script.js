@@ -1,86 +1,48 @@
 document.getElementById('authForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Предотвращаем отправку формы
+    // Сброс ошибок
+    document.getElementById('login-error').textContent = '';
+    document.getElementById('dob-error').textContent = '';
+    document.getElementById('gender-error').textContent = '';
 
-    // Получаем значения из полей ввода
-    const login = document.getElementById('login').value;
-    const password = document.getElementById('password').value;
-    const dob = document.getElementById('dob').value;
+    // Получение значений
+    let login = document.getElementById('login').value;
+    let dob = document.getElementById('dob').value;
+    let gender = document.querySelector('input[name="gender"]:checked');
 
-    // Сбрасываем предыдущие стили границ
-    document.getElementById('login').style.border = '2px solid white';
-    document.getElementById('password').style.border = '2px solid white';
-    document.getElementById('dob').style.border = '2px solid white';
+    // Массив для ошибок
+    let errors = [];
 
-    // Переменная для хранения ошибок
-    let hasError = false;
-
-    // Проверяем, заполнены ли все поля
-    if (!login) {
-        document.getElementById('login').style.border = '2px solid red'; // Красная граница
-        hasError = true; // Устанавливаем флаг ошибки
+    // Валидация логина
+    if (!login.match(/^[а-яА-ЯёЁ0-9]{4,10}$/)) {
+        errors.push('Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10.');
+        document.getElementById('login-error').textContent = errors[errors.length - 1]; // Выводим ошибку под логином
     }
 
-    if (!password) {
-        document.getElementById('password').style.border = '2px solid red'; // Красная граница
-        hasError = true; // Устанавливаем флаг ошибки
-    }
-
+    // Валидация даты рождения
     if (!dob) {
-        document.getElementById('dob').style.border = '2px solid red'; // Красная граница
-        hasError = true; // Устанавливаем флаг ошибки
-    }
-
-    // Если есть ошибки, прекращаем выполнение
-    if (hasError) {
-        return; // Прекращаем выполнение, если есть ошибки
-    }
-
-    // Определяем правильные учетные данные
-    const correctLogin = 'Руслан';
-    const correctPassword = '123';
-    const correctDob = '2006-12-12'; // Формат даты YYYY-MM-DD
-
-    // Проверяем, правильные ли учетные данные
-    let isValid = true; // Переменная для проверки валидности
-
-    if (login !== correctLogin) {
-        document.getElementById('login').style.border = '2px solid red'; // Красная граница
-        isValid = false; // Устанавливаем флаг ошибки
+        errors.push('Дата рождения не может быть пустой.');
+        document.getElementById('dob-error').textContent = errors[errors.length - 1]; // Выводим ошибку под датой рождения
     } else {
-        document.getElementById('login').style.border = '2px solid green'; // Зеленая граница
+        let birthDate = new Date(dob);
+        let today = new Date();
+        if (birthDate > today) {
+            errors.push('Дата рождения должна быть не позже текущей даты.');
+            document.getElementById('dob-error').textContent = errors[errors.length - 1]; // Выводим ошибку под датой рождения
+        }
     }
 
-    if (password !== correctPassword) {
-        document.getElementById('password').style.border = '2px solid red'; // Красная граница
-        isValid = false; // Устанавливаем флаг ошибки
+    // Валидация пола
+    if (!gender) {
+        errors.push('Выберите пол.');
+        document.getElementById('gender-error').textContent = errors[errors.length - 1]; // Выводим ошибку под полом
+    }
+
+    // Если есть ошибки, отменяем отправку формы
+    if (errors.length > 0) {
+        event.preventDefault(); // Отменяем отправку формы
     } else {
-        document.getElementById('password').style.border = '2px solid green'; // Зеленая граница
+        // Если ошибок нет, переходим на другую страницу
+        event.preventDefault(); // Отменяем отправку формы
+        window.location.href = 'links/description/description.html'; // Переход на нужную страницу
     }
-
-    if (dob !== correctDob) {
-        document.getElementById('dob').style.border = '2px solid red'; // Красная граница
-        isValid = false; // Устанавливаем флаг ошибки
-    } else {
-        document.getElementById('dob').style.border = '2px solid green'; // Зеленая граница
-    }
-
-    // Если все поля валидны, показываем успешное сообщение
-    if (isValid) {
-        alert('Авторизация успешна!');
-        
-        // Убираем класс disabled у ссылок
-        const links = document.querySelectorAll('#header-links a');
-        links.forEach(link => {
-            link.classList.remove('disabled'); // Удаляем класс disabled
-            link.style.pointerEvents = 'auto'; // Включаем клики
-            link.style.color = 'white'; // Возвращаем цвет текста
-        });
-    } else {
-        alert('Неверные учетные данные. Пожалуйста, попробуйте снова.');
-    }
-});
-
-// Изначально устанавливаем белую границу
-document.querySelectorAll('input').forEach(input => {
-    input.style.border = '2px solid white'; // Устанавливаем белую границу
 });
