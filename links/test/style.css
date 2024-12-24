@@ -110,7 +110,9 @@ input[type=text] {
 }
 
 
-
+.btn-exit a{
+    color: black;
+}
 
 .result{
     margin-top: 9px;
