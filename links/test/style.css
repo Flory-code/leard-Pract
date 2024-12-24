@@ -38,14 +38,24 @@ header a {
     height: 800px;
     background-color: rgb(165, 42, 42);
 }
+.container {
+    width: 900px;
+    margin: auto;
+    background: rgb(196, 196, 196);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
 .slide {
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 400px;
+    margin-left: 20px;
     padding: 20px;
-    color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0); 
 }
 
 
@@ -103,10 +113,10 @@ input[type=text] {
 
 
 .result{
-    margin-top: 20px;
+    margin-top: 9px;
     margin-left: 50%;
     font-size: 2rem;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
