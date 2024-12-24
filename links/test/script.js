@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчик отправки формы теста
     if (quizForm) {
         quizForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Вызов функции preventDefault
+            event.preventDefault(); 
 
             // Получение ответов
             let q1 = document.getElementById('q1').value.toLowerCase();
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let q4 = document.querySelector('input[name="q4"]:checked');
             let q5 = document.getElementById('q5').value.toLowerCase();
 
-            // Подсчет правильных ответов
+
             let correctAnswers = 0;
             if (q1 === 'wraith') correctAnswers++;
             if (q2 === 'medkit') correctAnswers++;
@@ -47,24 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (q4 && q4.value === 'scan') correctAnswers++;
             if (q5 === 'sniper') correctAnswers++;
 
-            // Показ результатов
+
             resultContent.innerHTML = `
                 <h2>Результаты:</h2>
                 <p>Вы ответили на ${correctAnswers} из 5 вопросов верно.</p>
             `;
 
-            // Сохранение результата в localStorage
+
             localStorage.setItem('testResult', `Вы ответили на ${correctAnswers} из 5 вопросов верно.`);
         });
     }
 
-    // Обработчик кнопки "Повторить"
+
     if (retryBtn) {
         retryBtn.addEventListener('click', function() {
-            // Сброс формы
+
             quizForm.reset();
             
-            // Сброс результатов на начальное значение
+
             resultContent.innerHTML = `
                 <h2>Результаты:</h2>
                 <p>Вы ответили на 0 из 5 вопросов верно.</p>
